@@ -30,8 +30,43 @@ const Navbar = () => {
         <li>
           <Link to="/" onClick={() => setIsActive(false)}>INICIO</Link>
         </li>
-        <li>
-          <Link to="/games" onClick={() => setIsActive(false)}>TIENDA</Link>
+
+        {/* Pestaña desplegable de TIENDA */}
+        <li className="dropdown">
+          <span>TIENDA</span>
+          <ul className="dropdown-content">
+            <li>
+              <Link to="/novedades" onClick={() => setIsActive(false)}>Novedades</Link>
+            </li>
+            <li>
+              <Link to="/ofertas" onClick={() => setIsActive(false)}>Ofertas</Link>
+            </li>
+            <li>
+              <Link to="/mas-vendidos" onClick={() => setIsActive(false)}>Más Vendidos</Link>
+            </li>
+            <li>
+              <Link to="/proximos-lanzamientos" onClick={() => setIsActive(false)}>Próximos Lanzamientos</Link>
+            </li>
+          </ul>
+        </li>
+
+        {/* Pestaña desplegable de CATEGORÍAS */}
+        <li className="dropdown">
+          <span>CATEGORÍAS</span>
+          <ul className="dropdown-content">
+            <li>
+              <Link to="/categorias/fps" onClick={() => setIsActive(false)}>FPS</Link>
+            </li>
+            <li>
+              <Link to="/categorias/moba" onClick={() => setIsActive(false)}>MOBA</Link>
+            </li>
+            <li>
+              <Link to="/categorias/rpg" onClick={() => setIsActive(false)}>RPG</Link>
+            </li>
+            <li>
+              <Link to="/categorias/sandbox" onClick={() => setIsActive(false)}>Sandbox</Link>
+            </li>
+          </ul>
         </li>
 
         {/* Rutas protegidas */}
